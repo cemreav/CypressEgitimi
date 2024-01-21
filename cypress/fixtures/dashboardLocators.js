@@ -3,8 +3,8 @@ export default{
   searchProductInputText:"//input[@placeholder='Search for products...']",
   shirtsLinkText:"//a[text()='Shirts']",
   removeLinkText:"//button[text()='Remove']",
-  paymentText:"//div[text()='Payment Information']",
-  shippingText:"//div[text()='Shipping Information']",
-  priceText:"//div[text()='Price Total']",
+  paymentText:"//div[@class='summary_info_label'][text()='Payment Information']",
+  shippingText:"//div[@class='summary_info_label'][text()='Shipping Information']",
+  priceText:"//div[@class='summary_info_label'][text()='Price Total']",
   finishText:"//h2[text()='Thank you for your order!']"
 }
