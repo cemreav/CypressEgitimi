@@ -1,0 +1,72 @@
+Git Bash ile Cypress kurulumu:
+-----------------
+
+1. Yeni bir klasör oluşturup orada git bash çalıştırılır.
+2. açılan terminalde "npm install cypress" komutu çalıştırılır.
+3. cevap sonrası "npx cypress open" komutu çalıştırılır.
+4. Tarayıcı seçilir uygulama açılır.
+
+Git Bash ile Klasör görüntüleme:
+1. Klasörde git bash açılır.
+2. "ls" komutu çalıştırıldı.
+3. listelenen klasörler görülür.
+4. "cd" seçilecek klasör.(Bu komut klasörün içine girmeyi sağlar.)
+5. açılan klasöre yeniden "ls" komutu çalıştırılır.
+
+Xpath kullanabilmek icin cypress in path paketini yüklememiz gerekiyor.
+npm install -D cypress-xpath
+
+<<1>> https://example.cypress.io/commands/querying (cypress örnek) 
+<<2>> https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test (cypress docs) 
+<<3>> https://drive.google.com/file/d/1UTVeOB46NGL2eU-w1P4hWo7_r1uzKhWG/view (14 Ocak Pazar eğitim) ok.
+<<4>> https://medium.com/bimar-teknoloji/cypress-ile-test-otomasyonu-e2e-testing-9ed9ed7da04e (giriş seviyesi makale)
+<<5>> https://medium.com/building-inventa/making-better-tests-with-cypress-869406661e53 (makale)
+<<6>> https://www.youtube.com/watch?v=jX3v3N6oN5M&ab_channel=LambdaTest (cypress youtube eğitim)
+<<7>> https://cloud.cypress.io/ (raporlarma için kullanılan alan)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* attributes olarak Full Xpath kullanılabilir. Xpath oluştururken akıllı xpath kullanılabilir.
+Unique bir değer bulunmalıdır.
+Örnek akıllı xpath oluşturma:
+1. //li//a[@class='text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300']
+2. //button[@aria-label='Open cart']
+3. /html/body/nav/div[2]/div[2]/form/input --> (//input[@name='search'])
+
+it('Search product white color type and 6X8 size', () => {
+        methods.visit('https://demo.vercel.store/')
+        methods.fillInput(dashboardLocators.searchProductInputText,'Acme Drawstring Bag{enter}')
+        methods.clickButton(searchResult.searchResultProduct)
+        methods.wait(1000)
+        methods.clickButton(productDetail.colorWhiteType,1000)
+        methods.clickButton(productDetail.productSizeType,1000)
+        methods.clickButton(productDetail.addToCartButton)
+        methods.shouldHaveText(productDetail.addedProductText,'Acme Drawstring Bag')
+        methods.shouldHaveText(productDetail.addedProductTypes,'White / 6 x 8 inch')
+      })
+it('Search product black color type and 7X9 size', () => {
+        methods.visit('https://demo.vercel.store/')
+        methods.fillInput(dashboardLocators.searchProductInputText,'Acme Drawstring Bag{enter}')
+        methods.clickButton(searchResult.searchResultProduct)
+        methods.wait(1000)
+        methods.clickButton(productDetail.colorBlackType,1000)
+        methods.clickButton(productDetail.productSecondSizeType,1000)
+        methods.clickButton(productDetail.addToCartButton)
+        methods.shouldHaveText(productDetail.addedProductText,'Acme Drawstring Bag')
+        methods.shouldHaveText(productDetail.addedSecondProductTypes,'Black / 7 x 9 inch')
+      })
+require('cypress-xpath');
+import methods from "../pages/Methods"
+import productDetail from "../fixtures/productDetail";
+import dashboardLocators from "../fixtures/dashboardLocators";
+import searchResult from "../fixtures/searchResult";
+
+Odev 1 :
+Herhangi bir uygulamaya login olmanızı istiyorum.
+Odev 2 :
+Sepete bir urun ekleyip burada 1 işaretinin kontrolu. Text olarak kontrol edebilirsiniz.
+https://demo.vercel.store/
+
+Ödev 14.01.2024
+https://demo.vercel.store/ sitesinde en alttaki home, about, terms and conditions, shipping and return policy, privacy policy ve faq nun acildigini test edelim ok.
+Sepete gelen urunun sayisini arttirdigimizda urunun fiyatının doğru arttigini kontrol edelim ok.
+

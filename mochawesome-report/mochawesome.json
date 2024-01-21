@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-20T09:10:00.751Z",
+    "end": "2024-01-20T09:10:08.624Z",
+    "duration": 7873,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a24636b8-34f6-41d0-9e91-4024b8122271",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SecondSpec.cy.js",
+      "file": "cypress\\e2e\\SecondSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HomeURL Control",
+              "fullTitle": "template spec HomeURL Control",
+              "timedOut": null,
+              "duration": 2339,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='Home']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/');\n});",
+              "err": {},
+              "uuid": "a741eed3-e221-4950-8510-e940ee4a7d66",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "AboutURL Control",
+              "fullTitle": "template spec AboutURL Control",
+              "timedOut": null,
+              "duration": 948,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='About']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/about');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/about');\n});",
+              "err": {},
+              "uuid": "83b9a37d-1f59-474f-a126-0cdd03bb14e1",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Terms & ConditionsURL Control",
+              "fullTitle": "template spec Terms & ConditionsURL Control",
+              "timedOut": null,
+              "duration": 1296,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='Terms & Conditions']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/terms-conditions');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/terms-conditions');\n});",
+              "err": {},
+              "uuid": "4a828e41-46fc-4ce8-a962-442b3d3cfb5a",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shipping & Return PolicyURL Control",
+              "fullTitle": "template spec Shipping & Return PolicyURL Control",
+              "timedOut": null,
+              "duration": 808,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='Shipping & Return Policy']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/shipping-return-policy');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/shipping-return-policy');\n});",
+              "err": {},
+              "uuid": "34479e1d-e2e0-40d6-97a0-cecf3e4b0a51",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Privacy PolicyURL Control",
+              "fullTitle": "template spec Privacy PolicyURL Control",
+              "timedOut": null,
+              "duration": 840,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='Privacy Policy']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/privacy-policy');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/privacy-policy');\n});",
+              "err": {},
+              "uuid": "643ec534-e718-4f16-bece-36ce4b494c62",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "FAQURL Control",
+              "fullTitle": "template spec FAQURL Control",
+              "timedOut": null,
+              "duration": 731,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//a[text()='FAQ']\").click();\ncy.url().should('eq', 'https://demo.vercel.store/frequently-asked-questions');\ncy.location().should(location => {\n  expect(location.href).to.eq('https://demo.vercel.store/frequently-asked-questions');\n});",
+              "err": {},
+              "uuid": "1888a7b3-02fb-4f22-9a01-9e435566de0d",
+              "parentUUID": "73edc1a4-4718-4c13-86df-84aebb6f93ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a741eed3-e221-4950-8510-e940ee4a7d66",
+            "83b9a37d-1f59-474f-a126-0cdd03bb14e1",
+            "4a828e41-46fc-4ce8-a962-442b3d3cfb5a",
+            "34479e1d-e2e0-40d6-97a0-cecf3e4b0a51",
+            "643ec534-e718-4f16-bece-36ce4b494c62",
+            "1888a7b3-02fb-4f22-9a01-9e435566de0d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
